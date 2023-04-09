@@ -7,37 +7,47 @@
     <title>Library</title>
     <script src="./library.js" defer></script>
     <link rel="stylesheet" href="./styles.css">
+    
 </head>
 <body>
-    <div id="add-book-section">
-        <form action="" id="add-book-form">
+    <header><h1>My library</h1><a href="#add-book-dialog" class="add-book-button">ADD BOOK</a></header>
+    <ul class="book-list">
+        <div class="card">
+            <p></p>
+        </div>
+        <div class="card">
+        </div>
+        <div class="card">
+        </div>
+    </ul>
+    <div id="add-book-dialog" class="modal-dialog">
+        <div class="add-book-section">
+            <a href="#" class="close-button">X</a>
+            <form class="add-book-form" action="">  
+                <h2>NEW BOOK</h2>
+                <div>
+                    <label for="title">Title</label>
+                    <input id="title" type="text">
+                </div>
+                <div>
+                    <label for="author">Author</label>
+                    <input id="author" type="text">
+                </div>
+                <div>
+                    <label for="editorial">Editorial</label>
+                    <input id="editorial"type="text">
+                </div>
+                <div>
+                    <label for="num-pages">Number of pages</label>
+                    <input id="num-pages"type="text">
+                </div>
+                
+            </form>
             <div>
-                <label for="title">Title</label>
-                <input id="title" type="text" required>
+                <a href="" class="add-book-confirm">Ok!</a>
             </div>
-            <div>
-                <label for="author">Author</label>
-                <input id="author" type="text" required>
-            </div>
-            <div>
-                <label for="num-pages">Number of pages</label>
-                <input id="num-pages" type="number" min="1" required>
-            </div>
-            <div>
-                <label for="editorial">Editorial</label>
-                <input id="editorial" type="text" required>
-            </div>
-            
-        </form>
-        <button id="add-book-button" form="add-book-form" type="submit">ADD New Book</button>
+        </div>
+        
     </div>
-    
-    <div id="book-section">
-        <h1>Books</h1>
-        <ul id="book-list">
-
-        </ul>
-    </div>
-    
 </body>
 </html>

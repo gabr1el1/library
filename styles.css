@@ -1,59 +1,149 @@
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    user-select: none;
 }
 
+body,html{
+    min-height: 100vh;
+}
 
 body{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    display: grid;
-    grid-template-rows: 1fr 6fr;
-    padding: 20px;
-}
-
-body > div{
-    margin-bottom: 20px;
-}
-#add-book-section{
     display: flex;
     flex-direction: column;
 }
 
-#add-book-form{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-#add-book-form div{
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-#add-book-button{
-    width: 120px;
-    margin-top: 20px;
-    padding: 5px 10px;
-    align-self: center;
-}
-
-#book-section h1{
-    text-align: center;
-}
-
-#book-list{
-    list-style-type: none;
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
-    gap: 10px;
-}
-
-#book-list li{
-    background: floralwhite;
+header{
+    box-shadow: 0px 5px 5px grey;
     padding: 10px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+    gap: 5px;
 }
+
+.modal-dialog{
+    display: none;
+    opacity: 0;
+	transition: opacity 0.4s ease-in;
+}
+
+.modal-dialog:target{
+    opacity: 1;
+    position: absolute;
+    top:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.889);
+    
+}
+
+.add-book-section{
+    background: white;
+    border-radius: 10px;
+    position: relative;
+    width: 45%;
+}
+
+.add-book-form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 15px 20px 15px;
+    margin-top: 20px;
+}
+
+.add-book-form > div{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.add-book-form > div > input{
+    border-radius: 5px;
+    border: none;
+    background: whitesmoke;
+    height: 1.7rem;
+    font-size: 1.3rem;
+}
+
+.add-book-form > div > label{
+    font-size: 1.7rem;
+}
+
+.close-button{
+    text-decoration: none;
+    background: white;
+    color: black;
+    position: absolute;
+    width: 30px;
+    padding: 5px;
+    border-radius: 0px 10px 0px 0px;
+    top: 0px;
+    right: 0px;
+    text-align: center;
+    transition: all 0.4s ease;
+}
+.close-button:hover{
+    background: black;
+    color: white;
+}
+
+.add-book-button{
+    text-decoration: none;
+    color: black;
+    background: white;
+    border: medium solid black;
+    border-radius: 15px;
+    padding: 10px;
+    transition: all 0.4s ease;
+}
+
+.add-book-button:hover{
+    opacity: 0.7;
+    color: white;
+    background: black;
+}
+
+.add-book-confirm{
+    display: inline-block;
+    background: white;
+    color: black;
+    padding: 5px;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 0px 0px 10px 10px;
+    font-size: 1.5rem;
+    width: 100%;
+    transition: all 0.4s ease;
+}
+
+.add-book-confirm:hover{
+    background: black;
+    color: white;
+}
+
+.book-list{
+    flex: 1;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,250px);
+    grid-template-rows: repeat(auto-fill,minmax(250px, max-content));
+    justify-content: center;
+    gap: 15px;
+    height: 100%;
+}
+
+.card{
+    box-shadow: 0px 5px 5px grey;
+    padding: 10px;
+    border-radius: 10px;
+}
+
