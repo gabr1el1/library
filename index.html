@@ -11,15 +11,15 @@
 </head>
 <body>
     <header><h1>My library</h1><a href="#add-book-dialog" class="add-book-button">ADD BOOK</a></header>
-    <ul class="book-list">
-        <div class="card">
+    <div class="book-list">
+        <!-- <div class="card">
             <p></p>
         </div>
         <div class="card">
         </div>
         <div class="card">
-        </div>
-    </ul>
+        </div> -->
+    </div>
     <div id="add-book-dialog" class="modal-dialog">
         <div class="add-book-section">
             <a href="#" class="close-button">X</a>
@@ -39,12 +39,16 @@
                 </div>
                 <div>
                     <label for="num-pages">Number of pages</label>
-                    <input id="num-pages"type="text">
+                    <input id="num-pages"type="number" min="0">
+                </div>
+                <div class="check">
+                    <label for="read-book">Read?</label>
+                    <input id="read-book" type="checkbox" min="0">
                 </div>
                 
             </form>
             <div>
-                <a href="" class="add-book-confirm">Ok!</a>
+                <a href="#" class="add-book-confirm">Ok!</a>
             </div>
         </div>
         
