@@ -69,7 +69,7 @@ const myLibrary = (function(){
         });
     }
     function removeBook(){
-        myLibrary.splice(this.dataset.index,1);
+        myBooks.splice(this.dataset.index,1);
         displayBooks();
     }
     
