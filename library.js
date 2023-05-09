@@ -1,5 +1,5 @@
 class Book{
-    constructor(title, author, eitorial, numPages, read){
+    constructor(title, author, editorial, numPages, read){
         this.title = title;
         this.author = author;
         this.editorial = editorial;
