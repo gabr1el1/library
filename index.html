@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,10 +8,13 @@
     <title>Library</title>
     <script src="./library.js" defer></script>
     <link rel="stylesheet" href="./styles.css">
-    
+
 </head>
+
 <body>
-    <header><h1>My library</h1><a href="#add-book-dialog" class="add-book-button">ADD BOOK</a></header>
+    <header>
+        <h1>My library</h1><a href="#add-book-dialog" class="add-book-button">ADD BOOK</a>
+    </header>
     <div class="book-list">
         <!-- <div class="card">
             <p></p>
@@ -23,35 +27,39 @@
     <div id="add-book-dialog" class="modal-dialog">
         <div class="add-book-section">
             <a href="#" class="close-button">X</a>
-            <form class="add-book-form" action="">  
+            <form class="add-book-form" action="">
                 <h2>NEW BOOK</h2>
                 <div>
                     <label for="title">Title</label>
-                    <input id="title" type="text">
+                    <p id="title-message"></p>
+                    <input id="title" type="text" required>
                 </div>
                 <div>
                     <label for="author">Author</label>
-                    <input id="author" type="text">
+                    <p id="author-message"></p>
+                    <input id="author" type="text" required>
                 </div>
                 <div>
                     <label for="editorial">Editorial</label>
-                    <input id="editorial"type="text">
+                    <p id="editorial-message"></p>
+                    <input id="editorial" type="text" required>
                 </div>
                 <div>
                     <label for="num-pages">Number of pages</label>
-                    <input id="num-pages"type="number" min="0">
+                    <input id="num-pages" type="number" min="1" value="1">
                 </div>
                 <div class="check">
                     <label for="read-book">Read?</label>
-                    <input id="read-book" type="checkbox" min="0">
+                    <input id="read-book" type="checkbox">
                 </div>
-                
+
             </form>
             <div>
-                <a href="#" class="add-book-confirm">Ok!</a>
+                <button class="add-book-confirm">Ok!</button>
             </div>
         </div>
-        
+
     </div>
 </body>
+
 </html>
